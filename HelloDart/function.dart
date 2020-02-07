@@ -17,6 +17,11 @@ main(List<String> args) {
   printInfo1('heyou', age: 24); // name=heyou age=18 height=null
   printInfo1('heyou', age: 24, height: 1.88); // name=heyou age=18 height=1.88
   printInfo1('heyou', height: 1.88); // name=heyou age=null height=1.88
+
+  // 调用printInfo2函数
+  printInfo2('heyou'); // name=heyou age=null height=null
+  printInfo2('heyou', 24); // name=heyou age=18 height=null
+  printInfo2('heyou', 24, 1.88); // name= age=18 height=1.88
 }
 int sum(num num1, num num2) {
   return num1 + num2;
@@ -37,3 +42,23 @@ sum1(num num1,num num2)=>num1+num2;
 printInfo1(String name, {int age, double height}) {
   print('name=$name age=$age height=$height');
 }
+
+//位置可选参数的演示:
+// 定义位置可选参数
+printInfo2(String name, [int age, double height]) {
+  print('name=$name age=$age height=$height');
+}
+
+/**
+ * 参数默认值
+ * 参数可以有默认值, 在不传入的情况下, 使用默认值,
+ * 注意, 只有可选参数才可以有默认值, 必须参数不能有默认值
+ */
+
+// 参数的默认值
+printInfo4(String name, {int age = 18, double height=1.88}) {
+  print('name=$name age=$age height=$height');
+}
+
+
+
