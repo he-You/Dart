@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'ClassAndObject.dart';
+import '10-ClassAndObject.dart';
 
 /**
  * 构造方法：
